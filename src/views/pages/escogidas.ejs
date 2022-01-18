@@ -1,0 +1,30 @@
+<%- include('../template/header')-%> <%- include('../template/navbar')-%>
+
+<div class="container-fluid p-4">
+  <div class="row">
+    <div class="col-md-4">
+      <a href="/"><button class="btn btn-info btn-block "><<< Atras</button></a>
+        <table class="table text-center pt-4">
+            <thead class="thead-dark">
+              <tr>
+                <th>#</th>
+                <th>Sessiones Aleatorias</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% elegidos.forEach(function(dts,index){%>
+              <tr>
+                <th scope="row"><%= index+1%></th>
+                <td><%= dts.session_id %></td>
+              </tr>
+              <%}) %>
+            </tbody>
+          </table>
+    </div>
+    <div class="col-md-8" style="display: flex; align-items: center;justify-content: center;">
+      <img class="img-fluid" src="https://media-exp1.licdn.com/dms/image/C4D0BAQELZp03grnjtQ/company-logo_200_200/0/1593228402233?e=2159024400&v=beta&t=7WkbkhHeNoeGy1YeTyAhTqpnKqXhiEzH5EjecW2syiY" >
+    </div>
+  </div>
+</div>
+
+<%- include('../template/footer')-%>
